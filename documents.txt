@@ -1,0 +1,84 @@
+Document de Conception : Portfolio de Photographe**
+
+## 1. **Objectif du Site**
+   - **Cible principale** : Clients potentiels (particuliers et entreprises) recherchant un photographe professionnel.
+   - **Ambiance** : Propre, élégante et moderne, mettant en avant le style du photographe de manière artistique.
+   - **Objectifs** : Présenter les travaux du photographe, valoriser ses services, faciliter le contact.
+
+## 2. **Structure et Contenu des Pages**
+
+### **Page d'Accueil**
+   - **But** : Donner une première impression impactante et résumer les points essentiels du site.
+   - **Sections** :
+     - **Image d’Introduction** : Image en plein écran avec un slogan (ex. : “Capturing Moments, Creating Memories”).
+     - **Brève Présentation** : Un court texte de 2-3 phrases sur le photographe et son style.
+     - **Lien vers Galerie et Services** : Boutons d'accès rapide pour naviguer directement vers les galeries et les services.
+   - **Texte** :
+     - Slogan : "Capturing Moments, Creating Memories"
+     - Introduction : "Avec une passion pour la photographie et une approche unique, [Nom du Photographe] capture des moments authentiques qui racontent une histoire. Explorez mes travaux et découvrez mes services."
+     
+### **Page Galerie**
+   - **But** : Montrer les meilleures œuvres du photographe, classées par catégories.
+   - **Sections** :
+     - **Catégories de Photos** : (Portraits, Mariages, Paysages, Événements, etc.)
+     - **Lightbox pour Visualisation** : Chaque image est cliquable pour être agrandie.
+     - **Description de Catégorie** (facultatif) : Une courte phrase pour chaque catégorie (ex. : “Moments intimes et sincères” pour les portraits).
+   - **Texte** : 
+     - Introduction : "Explorez mes portfolios et laissez-vous transporter par des instants capturés qui révèlent l'authenticité de chaque moment."
+   
+### **Page À Propos**
+   - **But** : Présenter le parcours, l'inspiration et la vision artistique du photographe.
+   - **Sections** :
+     - **Biographie du Photographe** : Un texte de 3-4 paragraphes sur le parcours, l'expérience et les influences.
+     - **Philosophie de la Photographie** : Quelques lignes sur ce qui distingue son travail et ce qu’il cherche à transmettre.
+   - **Texte** :
+     - Titre : "À Propos de Moi"
+     - Biographie : "[Nom du Photographe] est un photographe passionné avec plus de [X] années d'expérience. Inspiré par [inspiration, ex. la nature, les émotions humaines], chaque photo est une expression unique de l’instant capturé."
+     - Philosophie : "Mon approche se base sur l’authenticité et la spontanéité. J’aime raconter des histoires à travers chaque cliché."
+
+### **Page Services**
+   - **But** : Présenter les différents services offerts par le photographe.
+   - **Sections** :
+     - **Liste des Services** : Portraits, Mariages, Corporate, Événements, Retouche photo.
+     - **Description de Service** : Une courte explication pour chaque type de shooting (2-3 lignes).
+     - **Tarifs** (facultatif) : Plage de prix pour chaque type de service.
+   - **Texte** :
+     - Introduction : "Des souvenirs uniques et personnalisés pour chaque occasion."
+     - Exemple de service : "Mariages – Capturez l’un des plus beaux jours de votre vie avec des photos naturelles et intimes, qui vous replongeront dans ce moment magique."
+
+### **Page Témoignages**
+   - **But** : Renforcer la crédibilité avec des avis positifs de clients.
+   - **Sections** :
+     - **Avis Clients** : Témoignages authentiques, idéalement avec une photo du client (optionnel).
+   - **Texte** :
+     - Introduction : "Ce que mes clients disent de leur expérience."
+     - Exemple de témoignage : "“Grâce à [Nom du Photographe], chaque moment de notre mariage a été immortalisé avec soin et sensibilité. Un travail exceptionnel !” - Client heureux"
+
+### **Page Contact**
+   - **But** : Permettre aux visiteurs de contacter le photographe facilement.
+   - **Sections** :
+     - **Formulaire de Contact** : Nom, e-mail, numéro de téléphone, message.
+     - **Coordonnées** : Adresse e-mail professionnelle, numéro de téléphone, réseaux sociaux.
+   - **Texte** :
+     - Introduction : "Pour toute demande d’information ou réservation, n’hésitez pas à me contacter."
+     - Message de remerciement (après soumission) : "Merci pour votre message ! Je vous répondrai dans les plus brefs délais."
+
+## 3. **Design Visuel**
+
+### **Palette de Couleurs**
+   - **Couleur Principale** : Noir (pour une ambiance élégante)
+   - **Secondaire** : Blanc (pour la clarté et l’espace)
+   - **Accent** : Or ou beige pour une touche élégante
+   - **Texte** : Gris anthracite pour le texte principal, gris clair pour les textes secondaires.
+
+### **Typographie**
+   - **Titre** : Serif élégante (ex. : Playfair Display ou Georgia)
+   - **Texte** : Sans-serif sobre et lisible (ex. : Open Sans ou Lato)
+   - **Effets de texte** : Utilisation de majuscules et d’interlignes pour l’aération.
+
+### **Médias et Assets à Prévoir**
+   - **Images Haute Qualité** : Prévoir des versions optimisées pour le web (environ 2000px de largeur max pour une bonne qualité sans ralentir le chargement).
+   - **Logo du Photographe** (si existant) : Utilisé pour le branding.
+   - **Icônes des réseaux sociaux** : Instagram, Facebook, etc.
+   - **Éventuels Vidéos ou Timelapses** : Si le photographe a des vidéos de coulisses ou des timelapses de sessions photos, cela pourrait enrichir l’expérience.
+

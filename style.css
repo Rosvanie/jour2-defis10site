@@ -1,0 +1,383 @@
+/* === Variables Globales === */
+:root {
+    --primary-color: #1A1A1A; /* Noir pour les titres */
+    --secondary-color: #FAFAFA; /* Blanc cassé pour le fond */
+    --accent-color: #FFD700; /* Doré pour les éléments d'accentuation */
+    --text-color: #333333; /* Anthracite pour le texte principal */
+    --secondary-text-color: #666666; /* Gris pour le texte secondaire */
+    --font-primary: 'Open Sans', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+}
+
+/* === Réinitialisation de base === */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* === En-tête === */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    position: fixed; /* Rend le header fixe */
+    top: 0; /* Positionne le header en haut de la page */
+    left: 0; /* Aligne à gauche */
+    width: 100%; /* S'étend sur toute la largeur */
+    z-index: 1000; /* S'assure que le header reste au-dessus des autres éléments */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre pour délimiter le header */
+    padding: 1rem 0; /* Espacement interne */
+    transition: background-color 0.3s ease; /* Transition pour un effet subtil si nécessaire */
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: slideDown 0.5s forwards 0.3s; /* Animation au chargement */
+
+
+}
+
+header h1 {
+    margin: 0;
+    font-family: var(--font-secondary);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* === Animation de la page au défilement === */
+@keyframes slideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* === Responsive Navigation === */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Passe le menu en colonne */
+        gap: 0.5rem; /* Réduit l'espacement */
+    }
+
+    nav a {
+        font-size: 1rem; /* Taille des liens légèrement augmentée */
+        padding: 0.5rem 1rem; /* Ajout de padding pour rendre les liens plus cliquables */
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    nav a:hover {
+        color: var(--accent-color); /* Accentuation des liens au survol */
+    }
+}
+
+/* === Très petits écrans (comme les smartphones) === */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Réduction supplémentaire de la taille du titre */
+    }
+
+    header p {
+        font-size: 0.9rem; /* Réduction de la taille de la description */
+    }
+
+    nav a {
+        font-size: 0.85rem; /* Taille plus petite des liens */
+        padding: 0.4rem 0.8rem; /* Ajustement du padding */
+    }
+}
+
+.hero, .galerie, .a-propos, .services, .temoignages, .contact {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+
+
+
+
+
+/* === Section Hero === */
+.hero {
+    background-image: url('img/background.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 5rem 1rem;
+    margin-top: 140px;
+    animation-delay: 0.3s; /* Délai pour que la section apparaisse après le header */
+
+}
+
+.hero h2 {
+    font-family: var(--font-secondary);
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+
+
+.galerie, .services, .temoignages {
+    padding: 3rem 1rem;
+    text-align: center;
+    animation-delay: 0.5s;
+}
+
+
+
+
+/* === Section Galerie === */
+.galerie {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.galerie h2 {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.galerie p {
+    color: var(--secondary-text-color);
+}
+
+.galerie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.galerie-grid img {
+    width: 100%;
+    height: 250px; /* Hauteur fixe pour uniformiser */
+    object-fit: cover; /* Ajuste l'image pour remplir le cadre sans déformation */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galerie-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* === Section À Propos === */
+.a-propos {
+    padding: 3rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.a-propos h2 {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+}
+
+.a-propos p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* === Section Services === */
+.services {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.services h2 {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.service {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.service p {
+    color: var(--secondary-text-color);
+}
+
+/* === Section Témoignages === */
+.temoignages {
+    padding: 3rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.temoignages h2 {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+}
+
+.temoignage {
+    margin-top: 1.5rem;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+/* === Section Contact === */
+.contact {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.contact h2 {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact input,
+.contact textarea,
+.contact button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+}
+
+.contact button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: var(--accent-color);
+}
+
+/* === Pied de page === */
+footer {
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+footer p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+footer ul{
+    list-style: none;
+    display: flex;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .galerie-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+/* Animation de fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
